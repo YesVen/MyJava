@@ -10,3 +10,7 @@ public class FirstProgramme {
 	}
 
 }
+
+
+// Note copy this code into fileand save with .java extension and try to run .
+// this example is about simple Helloworld Program.
