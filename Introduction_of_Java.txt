@@ -1,0 +1,72 @@
+
+-----------------History of Java-----------------
+
+Java Orginally invented from Green Team at sun microsystems in 1995.
+Now sun microsystems is subsidiary of oracle corporation.
+
+Currently, Java is used in internet programming, mobile devices, games, e-business solutions etc.
+
+"James Gosling" developed  the Java Programming language .
+
+Java firstly , it was called "GreenTalk" from "JAMES GOSLING with extension .gt
+later it was called "Oak".
+
+The word Oak is a tree  name , later renamed to "JAVA".
+Orginally java is a island of indonesia where first coffee was produced.
+
+----------------------------------------------
+Now will have a look on Java version history
+----------------------------------------------
+JDK 1.0 	-- 1996
+JDK 1.1 	-- 1997
+J2SE 1.2	-- 1998
+J2SE 1.3	-- 2000
+J2SE 1.4	-- 2002
+J2SE 5.0	-- 2004
+Java SE 6	-- 2006
+Java SE 7	-- 2011
+Java SE 8	-- 2014
+----------------------------------------------
+
+-------Features of Java--------
+==========================
+1-Simple
+2-Object-Oriented
+3-Platform independent
+4-Secured
+5-Robust
+6-Architecture neutral
+7-Portable
+8-Dynamic
+9-Interpreted
+10-High Performance
+11-Multithreaded
+12-Distributed
+==========================
+Simple : java language is simple because it follows c++ based syntax
+
+Object -Oriented: Like in c++ it support OOP's Concept .java is pure OOP.
+
+Platform Independent: platform is the hardware or software enivronment, java code can be run on multiple platforms eg:Windows,Linux,Mac etc 
+Java code is complied by the compiler and converted into bytecode. This bytecode is a platform-independant code because it can be run on multiple platforms."Write once & run anywhere"
+
+Secured: Java code run inside the virtual machine , so its provide a secure way to access a internet applications .
+
+Robust: The word Robust means Strong .
+In  java there is lack of pointeres so its avoid security problem.
+
+Architecture Neutral : java build .class extension it can run on any machine without considering  architecture 
+
+Portable: java is portable which can run on any machine write once run anywhere concept.
+
+Dynamic: It loads the class files at runtime ,anything happens at runtime is conidered as Dynamic.
+
+Interpreted: java is compiled language ,but rather than compile straight to executable machine code,it compilesto an intermediate binary form called JVM byte code.
+The byte code is then compiled and or interpreted to run the program.
+
+High Performance: java is interpreted language ,so it ll never be fast as c orc++, but java enables high performance with use of just in time compiler.
+
+Multithread:A thread is like a seperate program,java deals with many tasks once defining multiple threads.
+advantage of multithreading is that it doesn't occupy memory for each thread.
+
+Distributed:java supports distributed applications can access files by calling the methods from any machine on the internet.
