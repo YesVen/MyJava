@@ -1,0 +1,145 @@
+===================================
+OOPS Concept in java
+============================
+-> Abstraction
+-> Encapsulation
+-> Polymorphism
+-> Inheritance
+
+--------------------------------
+Abstraction::
+___________
+Abstraction is a way of hiding complexity.
+for example in real time example car. we all know the brakes pressed , it will stop we don't know the internal process how does it going to work.
+
+In java it hides complexity it show only essential features of the object .
+
+Encapsulation::
+______________
+Wrapping of code and data into single unit .
+Real time example HR in software company 
+we interact through HR not directly with admin so here HR is acting as a interface .
+
+The whole idea behind encapsulation is to hide the implementation
+
+Polymorphism::
+_____________
+Polymorphism means more than one forms
+in simple polymorphism is a way in which something behaves differently based on its call.for example water,it can be in any form liquid or gas..
+ In java polymorphism allows you to define one iterface and jave multiple implemntations
+
+in this we have 2 types polymorphism in java
+-->Method Overloading
+-->Method Overriding
+
+now, What is Method ????
+
+-->Simple method is block of code which refered to by name and can be called at any point in a program
+
+example 
+-----------------------------------
+public class sum{
+
+//method add with accepting 2 parameters of type int and displaying out when it calls
+public void add(int num1,int num2)
+{
+int total;
+total=num1+num2;
+System.out.println("Sum of two integers is "+total);
+}
+public static void main(String args[])
+{
+sum s= new sum();
+// calling method add with values sending into it 
+s.add(10,20);
+}}
+----------------------------------------
+
+Now will see method Overloading?????
+-->
+Methods with same name but with different datatype or arguments
+
+example
+
+class Overload
+{
+    void demo (int a)
+    {
+       System.out.println ("a: " + a);
+    }
+    void demo (int a, int b)
+    {
+       System.out.println ("a and b: " + a + "," + b);
+    }
+    double demo(double a) {
+       System.out.println("double a: " + a);
+       return a*a;
+    }
+public satatic void main(String args[])
+{
+	Overload Obj = new Overload();
+        double result;
+        Obj .demo(10);
+        Obj .demo(10, 20);
+        result = Obj .demo(5.5);
+        System.out.println("O/P : " + result);
+    }
+}
+
+Note :: In this example we have 3 methods with same name bu twith different dataype or arguments type 
+--------------------------------------------
+Rules for Method Overloading
+-----------------------------------------------------
+Overloading can take place in the same class or in its sub-class.
+Constructor in Java can be overloaded
+Overloaded methods must have a different argument list.
+Overloaded method should always be the part of the same class (can also take place in sub class), with same name but different parameters.
+The parameters may differ in their type or number, or in both.
+They may have the same or different return types.
+It is also known as compile time polymorphism.
+
+2) Method Overriding
+
+Child class has the same method as of base class. In such cases child class overrides the parent class method without even touching the source code of the base class. This feature is known as method overriding.
+Example:
+
+public class BaseClass
+{
+    public void methodToOverride() //Base class method
+    {
+         System.out.println ("I'm the method of BaseClass");
+    }
+}
+public class DerivedClass extends BaseClass
+{
+    public void methodToOverride() //Derived Class method
+    {
+         System.out.println ("I'm the method of DerivedClass");
+    }
+}
+
+public class TestMethod
+{
+     public static void main (String args []) {
+        // BaseClass reference and object
+        BaseClass obj1 = new BaseClass(); 
+        // BaseClass reference but DerivedClass object
+        BaseClass obj2 = new DerivedClass(); 
+        // Calls the method from BaseClass class
+        obj1.methodToOverride(); 
+        //Calls the method from DerivedClass class
+        obj2.methodToOverride(); 
+     }
+}
+
+------------------------------------------------------
+Rules for Method Overriding:
+--------------------------------------------------------------
+applies only to inherited methods
+object type (NOT reference variable type) determines which overridden method will be used at runtime
+Overriding method can have different return type (refer this)
+Overriding method must not have more restrictive access modifier
+Abstract methods must be overridden
+Static and final methods cannot be overridden
+Constructors cannot be overridden
+It is also known as Runtime polymorphism
