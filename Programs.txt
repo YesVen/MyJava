@@ -1,0 +1,62 @@
+/// Find the Even Odd Numbers using java
+
+public class Stud {
+
+	// Method which accepts the integer parameter to check even or odd
+	public void evenOdd(int num) {
+		if (num % 2 == 0) {
+			System.out.println(num + "-- is Even number");
+		} else
+			System.out.println("Given number is odd!!");
+	}
+
+	public static void main(String[] args) {
+
+		Stud s = new Stud();
+		s.evenOdd(123);
+
+	}
+}
+
+/// Factorial of number 
+
+public class Stud {
+
+	public static  void fact(int n) {
+		int fact = 1;
+		if (n == 0 || n == 1) {
+			System.out.println("Factorial for " + n + "is 1");
+		} else
+
+			for (int i = 2; i <= n; i++) {
+				fact = fact * i;
+			}
+		System.out.println("factorial number of " + n + " is " + fact);
+	}
+
+	public static void main(String[] args) {
+		
+		fact(5);
+	}
+}
+
+///Swap two numbers without using third variable 
+
+public class Stud{
+	
+	public static void swap(int a,int b){
+		a=a+b;
+		b=a-b;
+		a=a-b;
+		
+		System.out.println("After swapping :"+a+" and "+b);
+	}
+	
+	public static void main (String args[])
+	{
+		int a=10;
+		int b=20;
+		swap(a,b);
+		System.out.println("Before swapping :"+a+" and "+b);
+	}
+}
