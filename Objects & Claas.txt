@@ -1,0 +1,42 @@
+===================Objects and class in Java=================
+
+Before discussing OOPs concept let us have a brief look at object and class with real world examples.
+
+Object ----- In real time Example
+Every object has 2 characterstics state and behavior example car
+here, car colour is state and behavior is defined by changing colour.
+
+In Programming 
+
+State is Data members..
+Behavior is Methods...
+
+Class--in Real time car is class and is blue of  class Object
+
+Syntax of class 
+________________________
+access_modifier class class_Name{
+
+//Body of the class
+
+}
+
+Example===>:
+
+Public class car
+{
+String color;//data members of type string
+int price;   // data members of type int 
+}
+________________________
+
+Access_modifier     within class       within package
+_____________________________________________________
+Private 		Y			N
+Default			Y			Y
+Protected		Y			Y
+Public 			Y			Y
+
+
+
+
