@@ -1,0 +1,276 @@
+==============INTERFACE================
+
+In General example let take our computer keyboard its and interface when u press keys its shows some action .
+where here keyboard acts as an interface between user and computer.
+
+What is interface in java?????
+-------------------------------------
+* Interface is a way of 100% abstraction.
+*Interface looks like class but it is not a class.
+*Interface can have methods and variables just like class,
+*but methods delcared in interface are default abstract
+*only method declaration ,no body.
+*variable  declared in an interface are public ,static and final by default.
+
+:::Syntax:::
+______________________________________________________
+Interface Interface_Name {
+                //abstract methods
+
+                //static final data members
+
+}
+___________________________________________________________
+:::example:::
+____________________________________________________________
+interface MyInterface
+{
+   /* All the methods are public abstract by default
+    * Note down that these methods are not having body
+    */
+   public void method1();
+   public void method2();
+}
+___________________________________________________________
+
+-->An interface can’t be instantiated, 
+-->it can be implemented by classes. 
+-->To implement an interface implements keyword is used 
+
+
+========Note: ============
+
+1. A class extends another class.
+
+2. An interface extends another interface.
+
+3. A class implements an interface
+
+
+_________________________________________________________________________________________
+
+Now will see how to implement the interface 
+
+example::
+
+---------------------------------------------------------
+//interface with method show() 
+interface demo{
+	 void show(String name);
+}
+
+//here we r implementing that interface to this class
+public class Stud implements demo{
+	
+	//Interface method body 
+	public void show(String name) {
+		System.out.println(name);
+		
+	}
+	public static void main(String []v)
+	{       //object creation
+		Stud obj= new Stud();
+		//method call
+		obj.show("Yathish");
+	}
+     }
+-----------------------------------------------------
+ Interface cannot be declared as private, protected 
+like
+
+public interface demo{
+
+// this is wrong
+}
+
+
+``````````````````````````````````````````````````````````````````
+-----------Key Points--------------
+
+* implements keyword is used by classes to implement an interface.
+---------------
+Exampl:::::
+public class className implements interfaceName{
+
+}
+-------------------
+* While providing implementation in class of any method of an interface, it needs to be mentioned as public.
+check abouve example --->
+
+
+* Class implementing any interface must implement all the methods, otherwise the class should be declared as “abstract”.
+
+* Interface cannot be declared as private, protected or transient.
+---------------------------
+public interface demo{
+}
+private interface demo{
+}
+--------------------------
+
+* All the interface methods are by default abstract and public.
+* Variables declared in interface are public, static and final by default.
+---------------------------------------
+interface demo
+{
+   int a=10;
+   public int a=10;
+   public static final int a=10;
+   final int a=10;
+   static int a=0;
+}
+----------------------------------------
+* Interface variables must be initialized at the time of declaration otherwise compiler will through an error.
+---------------
+interface demo
+{
+      int x;//Compile-time error
+}
+
+interface demo
+{
+      int x=0;
+-------------------
+* Inside any implementation class, you cannot change the variables declared in interface because by default, they are public, static and final. Here we are implementing the interface “Try” which has a variable x. When we tried to set the value for variable x we got compilation error as the variable x is public static final by default and final variables can not be re-initialized.
+--------------------------
+class Sample implements demo
+{
+  public static void main(String args[])
+  {
+     x=20; //compile time error
+  }
+}
+
+-------------------------------------------
+* Any interface can extend any interface but cannot implement it. Class implements interface and interface extends interface.
+*  A class can implement any number of interfaces.
+* If there are two or more same methods in two interfaces and class implements both interfaces
+
+::Example::
+-----------------------------------
+interface A{
+public void sum();
+}
+interface B{
+public void sum();
+}
+
+public class implements A,B{
+  public void sum()
+   {
+
+   }
+ public static void main(String args[])
+   {
+   }
+}
+--------------------------------------
+* A class cannot implement two interfaces that have methods with same name but different return type.
+:::Example:::
+-------------------------------
+interface A
+{
+   public void aaa();
+}
+interface B
+{
+   public int aaa();
+}
+
+class Central implements A,B
+{
+
+   public void aaa() // error
+   {
+   }
+   public int aaa() // error
+   {
+   }
+   public static void main(String args[])
+   {
+
+   }
+}
+------------------------------------------------
+*  Variable names conflicts can be resolved by interface name e.g:
+:::Example::::
+
+interface A
+{
+    int x=10;
+}
+interface B
+{
+    int x=100;
+}
+-----------------------------------------------------------
+
+++++++++++++++++++++++++
+++++++++++++++++++++++++Benefits of having interfaces:+++++++++++++++++
+
+--> Without bothering about the implementation part, we can achieve the security of implementation
+
+-->In java, multiple inheritance is not allowed, However by using interfaces you can achieve the same . A class can extend only one class but can implement any number of interfaces.
+
+
+
+------------------------------------------------------------------------
+Multiple inheritance in java.
+1. A class can implements multiple interfaces.
+2. An interface can extends multiple interfaces.
+
+example:::::::
+
+interface ShowAge
+{ 
+void age(int age); 
+}  
+ interface ShowName
+{ 
+void name(String name); 
+} 
+public class InterfaceExample2 implements ShowAge, ShowName
+{ 
+public void age(int age) 
+{ 
+System.out.println("Age = " + age); 
+} 
+public void name(String name) 
+{
+ System.out.println("Name = " + name);
+}
+public static void main(String args[]){
+ //object creation 
+InterfaceExample2 obj = new InterfaceExample2(); 
+  //method call 
+obj.name("jai"); 
+obj.age(26); 
+} } 
+--------------------------------------------------------------------------------------
+
++++++++++++++++Why multiple inheritance is possible in case of interfaces but not possible in case of classes? 
+
+Multiple inheritance is possible in case of interfaces but not possible in case of classes because there is no ambiguity problem in case of interfaces as implementation is provided by class that implements interfaces not by interfaces itself.
+
+++++++++++++An Interface extendds another interface ++++++++++++
+
+Example:
+
+
+interface ShowAge{ 
+//This method is used to print age.
+ void age(int age); 
+}   
+interface ShowName{
+ //This method is used to print name.
+ void name(String name);
+ }   
+interface showDetails extends ShowAge, ShowName{ 
+//This method is used to print roll no. 
+void rollNo(int rollNo);
+ }
+---------------------------------------------------------------
+
+
+Why an interface can’t have constructor?
+ Because interface not have any instance fields so nothing to construct. 
