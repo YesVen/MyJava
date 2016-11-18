@@ -1,0 +1,116 @@
+====================================================================================
+		ABSTRACT CLASS IN JAVA
+====================================================================================
+
+--> A class that is declared using “abstract” keyword is known as abstract class.
+-->  It may or may not include abstract methods which means in abstract class you can have concrete methods (methods with body) as well along with abstract methods ( without an implementation, 
+
+syntax:
+_____________________________________________
+abstract class className {
+   // declare fields
+
+   // declare abstract/non-abstract methods
+
+}
+______________________________________________
+
+--------------Abstract method:---------------------
+
+--> A method with no implementation i.e. without braces and followed by a semicolon.
+
+Syntax:
+___________________________________________
+abstract return_type methodName();
+____________________________________________
+
+Points to remember about abstract method:
+
+1) Abstract method has no body.
+2) Always end the declaration with a semicolon(;).
+3) It must be overridden. An abstract class must be extended and in a same way abstract method must be overridden.
+4) Abstract method must be in a abstract class.
+-------------------------------------------------------
+Combining both abstasrct class and abstract method
+
+here it is ,
+-----------------------------------------
+abstract class AbstractDemo{
+   
+   public void myMethod(){
+      
+   }
+}
+------------------------------------------
+******************Remember two rules:*****************
+1) If the class is having few abstract methods and few concrete methods: declare it as abstract class.(ex1)
+2) If the class is having only abstract methods: declare it as interface.(ex2)
+
+
+example 1:
+abstract class Graphic {
+	//abstract method
+	abstract void shape();
+	//concrete method with body
+	public void size()
+	{
+		
+	}
+}
+------------
+exmaple 2:
+interface Graphic {
+	abstract void shape();
+	abstract int num();
+}
+-----------------------------------------------------------------
+-->Object creation of abstract class is not allowed
+
+If we will create an object of the abstract class and calls the method having no body(as the method is pure virtual) it will give an error. That is why we cant create object of abstract class
+
+example:
+
+abstract public class AbstractDemo{
+	
+	abstract void show();
+}
+
+public class Stud {
+
+	public static void main(String s[]) {
+
+		AbstractDemo obj = new AbstractDemo();
+		
+	}
+}
+---------------------------------------------------------------------
+
+Why we need an abstract class?
+
+Let me explain this with an example. 
+Suppose there is a class Animal and there are few other classes like Cat, Dog and Horse.
+These classes extends Animal class so basically they are having few common habits(methods in technically) which they are inheriting from Animal class. 
+
+Now, if you have understood the above example then you would have been able to figure out that creating object of Animal class has no significance as you can’t judge that the new object of Animal class will represent which animal. 
+
+Hence for such kind of scenarios we generally creates an abstract class and later concrete classes extends these classes and overrides their methods accordingly and can have their own methods as well.
+
+----------------------------
+Abstract vs Concrete
+----------------------------
+A class which is not abstract is referred as Concrete class. 
+
+------------------------
+	Key Points:
+-----------------------
+
+* An abstract class has no use until unless it is extended by some other class.
+* If you declare an abstract method (discussed below) in a class then you must declare the class abstract as well. you can’t have abstract method in a non-abstract class.
+*  It’s vice versa is not always true: If a class is not having any abstract method then also it can be marked as abstract.
+* Abstract class can have non-abstract method (concrete) as well.
+* In the above example which I explained – Animal is a abstract class and Cat, Dog and Horse are concrete classes.
+
+
+
+-------------------------------THANK YOU REFER NEXT NOTES ---------------------------------
+
